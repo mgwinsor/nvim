@@ -51,4 +51,5 @@ return require('packer').startup(function(use)
             end, { expr = true })
         end
     }
+    use { 'folke/which-key.nvim' }
 end)
