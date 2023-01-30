@@ -18,13 +18,14 @@ wk.register({
         g = {
             name = "+git",
             b = { "<cmd>Telescope git_branches<cr>", "branches" },
-            f = { "<cmd>Telescope git_files<cr>", "status" },
+            d = { "<cmd>Telescope git_status<cr>", "status details" },
+            g = { "<cmd>Git<cr>", "status" },
+            h = { "<cmd>Telescope git_files<cr>", "files" },
+            f = { "<cmd>Git fetch<cr>", "fetch" },
             l = { "<cmd>Telescope git_commits<cr>", "log" },
-            u = {
-                name = "+update local",
-                f = { "<cmd>Git fetch<cr>", "fetch" },
-                p = { "<cmd>Git pull<cr>", "pull" },
-            },
+            p = { "<cmd>Git pull<cr>", "pull" },
+            r = { "<cmd>Git push<cr>", "push" },
+            s = { "<cmd>Telescope git_stash<cr>", "stash" },
         },
     },
 })
