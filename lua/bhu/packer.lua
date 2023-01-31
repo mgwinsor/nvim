@@ -43,13 +43,6 @@ return require('packer').startup(function(use)
         },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
-    use {
-        'Exafunction/codeium.vim',
-        config = function()
-            vim.keymap.set('i', '<C-g>', function()
-                return vim.fn['codeium#Accept']()
-            end, { expr = true })
-        end
-    }
+    use { 'Exafunction/codeium.vim' }
     use { 'folke/which-key.nvim' }
 end)
