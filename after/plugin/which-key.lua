@@ -10,6 +10,7 @@ wk.register({
             b = { "<cmd>Telescope buffers<cr>", "list" },
             k = { "kill (to be added)" },
         },
+        e = { "<cmd>Ex<cr>", "netrw" },
         f = {
             name = "+file",
             f = { "<cmd>Telescope find_files<cr>", "find file" },
