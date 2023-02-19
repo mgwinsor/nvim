@@ -28,6 +28,8 @@ wk.register({
             r = { "<cmd>Git push<cr>", "push" },
             s = { "<cmd>Telescope git_stash<cr>", "stash" },
         },
+        h = { "<cmd>split<cr>", "h-split" },
         t = { "<cmd>NvimTreeToggle<cr>", "tree" },
+        v = { "<cmd>vsplit<cr>", "v-split" },
     },
 })
