@@ -53,4 +53,5 @@ return require('packer').startup(function(use)
         'lewis6991/gitsigns.nvim',
         tag = 'release',
     }
+    use 'm4xshen/smartcolumn.nvim'
 end)
