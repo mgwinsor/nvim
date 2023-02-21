@@ -54,4 +54,5 @@ return require('packer').startup(function(use)
         tag = 'release',
     }
     use 'm4xshen/smartcolumn.nvim'
+    use('christoomey/vim-tmux-navigator')
 end)
