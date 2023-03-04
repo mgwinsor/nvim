@@ -4,7 +4,12 @@ require("which-key").setup()
 
 local wk = require("which-key")
 wk.register({
-    ["<leader>"] = {
+        ["<leader>"] = {
+        a = {
+            name = "+harpoon",
+            a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "harpoon add" },
+            h = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "harpoon" },
+        },
         b = {
             name = "+buffers",
             b = { "<cmd>Telescope buffers<cr>", "list" },
