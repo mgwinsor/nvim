@@ -9,6 +9,7 @@ wk.register({
             name = "+harpoon",
             a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "harpoon add" },
             h = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "harpoon" },
+            t = { "<cmd>Telescope harpoon marks<cr>", "telescope marks" },
         },
         b = {
             name = "+buffers",
