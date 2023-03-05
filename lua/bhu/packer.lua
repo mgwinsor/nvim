@@ -2,23 +2,35 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-    -- Packer can manage itself
+    -- Packer
     use 'wbthomason/packer.nvim'
+
+    -- Plugin Libraries
+    use 'nvim-lua/plenary.nvim'
+
+    -- Navigation
+    use 'theprimeagen/harpoon'
+    use 'folke/which-key.nvim'
+    use 'christoomey/vim-tmux-navigator'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        requires = {
-            'nvim-lua/plenary.nvim'
-        }
+        requires = { 'nvim-lua/plenary.nvim' }
     }
-    use 'rebelot/kanagawa.nvim'
     use {
         'nvim-treesitter/nvim-treesitter',
-        { run = ':TSUpdate' }
+        run = ':TSUpdate'
     }
-    use 'nvim-lua/plenary.nvim'
-    use 'theprimeagen/harpoon'
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = { 'nvim-tree/nvim-web-devicons' },
+    }
+
+    -- Version Control
     use 'mbbill/undotree'
     use 'tpope/vim-fugitive'
+    use 'lewis6991/gitsigns.nvim'
+
+    -- LSP
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -41,22 +53,17 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' }, -- Optional
         }
     }
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
-    }
+
+    -- Completion
     use 'Exafunction/codeium.vim'
-    use 'folke/which-key.nvim'
+
+    -- Asthetics
+    use 'rebelot/kanagawa.nvim'
+    use 'xiyaowong/nvim-transparent'
+    use 'm4xshen/smartcolumn.nvim'
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    use {
-        'lewis6991/gitsigns.nvim',
-        tag = 'release',
-    }
-    use 'm4xshen/smartcolumn.nvim'
-    use 'christoomey/vim-tmux-navigator'
+    use 'eandrju/cellular-automaton.nvim'
 end)
