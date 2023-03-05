@@ -5,22 +5,24 @@ require("which-key").setup()
 local wk = require("which-key")
 wk.register({
         ["<leader>"] = {
-        a = {
-            name = "+harpoon",
-            a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "harpoon add" },
-            h = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "harpoon" },
-            t = { "<cmd>Telescope harpoon marks<cr>", "telescope marks" },
-        },
+        a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "harpoon add" },
         b = {
             name = "+buffers",
             b = { "<cmd>Telescope buffers<cr>", "list" },
             k = { "kill (to be added)" },
         },
-        e = { "<cmd>Ex<cr>", "netrw" },
+        d = { "delete to void" },
+        e = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "harpoon" },
         f = {
             name = "+file",
             f = { "<cmd>Telescope find_files<cr>", "find file" },
             g = { "<cmd>Telescope live_grep<cr>", "live grep" },
+            h = { "<cmd>Telescope harpoon marks<cr>", "telescope marks" },
+            m = {
+                name = "+magic",
+                l = { "<cmd>CellularAutomaton make_it_rain<cr>", "make it rain" },
+                k = { "<cmd>CellularAutomaton game_of_life<cr>", "game of life" },
+            },
         },
         g = {
             name = "+git",
@@ -35,7 +37,12 @@ wk.register({
             s = { "<cmd>Telescope git_stash<cr>", "stash" },
         },
         h = { "<cmd>split<cr>", "h-split" },
+        p = { "paste special" }, -- remap.lua
+        s = { "replace word" },  -- remap.lua
         t = { "<cmd>NvimTreeToggle<cr>", "tree" },
+        u = { "<cmd>UndotreeToggle<cr>", "undo tree" },
         v = { "<cmd>vsplit<cr>", "v-split" },
+        x = { "<cmd>!chmod +x %<cr>", "chmod +x" },
+        y = { "yank special" }, -- remap.lua
     },
 })
